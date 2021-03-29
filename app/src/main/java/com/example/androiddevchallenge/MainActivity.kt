@@ -15,47 +15,56 @@
  */
 package com.example.androiddevchallenge
 
+import android.graphics.Color
 import android.os.Bundle
+import android.view.View
+import android.view.WindowManager
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.androiddevchallenge.ui.theme.MyTheme
 
+@ExperimentalMaterialApi
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        @Suppress("DEPRECATION")
+        window.apply {
+            clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+
+            // Set the text/icon in StatusBar to white.
+            decorView.systemUiVisibility =
+                View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+
+            // Set StatusBarBackgroundColor to transparent
+            statusBarColor = Color.TRANSPARENT
+        }
+
         setContent {
-            MyTheme {
-                MyApp()
+            MyTheme(true) {
+                WeatherApp()
             }
         }
     }
 }
 
-// Start building your app here!
-@Composable
-fun MyApp() {
-    Surface(color = MaterialTheme.colors.background) {
-        Text(text = "Ready... Set... GO!")
-    }
-}
-
 @Preview("Light Theme", widthDp = 360, heightDp = 640)
+@ExperimentalMaterialApi
 @Composable
 fun LightPreview() {
     MyTheme {
-        MyApp()
+        WeatherApp()
     }
 }
 
 @Preview("Dark Theme", widthDp = 360, heightDp = 640)
+@ExperimentalMaterialApi
 @Composable
 fun DarkPreview() {
     MyTheme(darkTheme = true) {
-        MyApp()
+        WeatherApp()
     }
 }

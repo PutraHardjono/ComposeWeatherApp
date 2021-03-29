@@ -10,4 +10,49 @@
       the License.
       -->
     <string name="app_name">AndroidDevChallenge</string>
+
+    <!-- Weather Status -->
+    <string name="clear">Clear</string>
+    <string name="cloudy">Cloudy</string>
+    <string name="foggy">Foggy</string>
+    <string name="heavy_rain">Heavy Rain</string>
+    <string name="heavy_snow">Heavy Snow</string>
+    <string name="light_rain">Light Rain</string>
+    <string name="light_snow">Light Snow</string>
+    <string name="snow_storm">Snow Storm</string>
+    <string name="storm">Storm</string>
+
+
+    <!-- Wind Direction -->
+    <string name="north">North</string>
+    <string name="north_east">North East</string>
+    <string name="east">East</string>
+    <string name="south_east">South East</string>
+    <string name="south">South</string>
+    <string name="south_west">South West</string>
+    <string name="west">West</string>
+    <string name="north_west">North West</string>
+
+
+    <!-- Air Quality -->
+    <string name="good">Good</string>
+    <string name="moderate">Moderate</string>
+    <string name="unhealthy_for_sensitive">Unhealthy for Sensitive</string>
+    <string name="unhealthy">Unhealthy</string>
+    <string name="very_unhealthy">Very Unhealthy</string>
+    <string name="hazardous">Hazardous</string>
+
+
+    <!-- Format -->
+    <string name="wind_speed_format">%s km/h</string>
+    <string name="humidity_format">%d %%</string>
+    <string name="temperature_format">%s° / %s°</string>
+
+    <!-- Caption -->
+    <string name="wind">Wind</string>
+    <string name="humidity">Humidity</string>
+    <string name="uv_index">UV Index</string>
+    <string name="air_quality">Air Quality</string>
+    <string name="daily">Daily</string>
+    <string name="today">Today</string>
 </resources>

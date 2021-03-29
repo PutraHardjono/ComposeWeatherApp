@@ -17,27 +17,75 @@ package com.example.androiddevchallenge.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import com.example.androiddevchallenge.R
+
+private val roboto = FontFamily(
+    Font(R.font.roboto_bold, FontWeight.Bold),
+    Font(R.font.roboto_light, FontWeight.Light),
+    Font(R.font.roboto_regular, FontWeight.Normal),
+    Font(R.font.roboto_medium, FontWeight.Medium)
+)
 
 // Set of Material typography styles to start with
 val typography = Typography(
-    body1 = TextStyle(
-        fontFamily = FontFamily.Default,
+    defaultFontFamily = roboto,
+
+    h1  = TextStyle(
+        fontWeight = FontWeight.Light,
+        fontSize = 96.sp,
+        letterSpacing = (-1.5).sp
+    ),
+
+    h2  = TextStyle(
+        fontWeight = FontWeight.Light,
+        fontSize = 60.sp,
+        letterSpacing = (-0.5).sp
+    ),
+
+    h3 = TextStyle(
+        fontWeight = FontWeight.Medium,
+        fontSize = 48.sp
+    ),
+
+    h6 = TextStyle(
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp
-    )
-        /* Other default text styles to override
-    button = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.W500,
+    ),
+
+    subtitle1 = TextStyle(
+        fontWeight = FontWeight.Medium,
+        fontSize = 16.sp
+    ),
+
+    subtitle2 = TextStyle(
+        fontWeight = FontWeight.Medium,
         fontSize = 14.sp
     ),
-    caption = TextStyle(
-        fontFamily = FontFamily.Default,
+
+    body1 = TextStyle(
         fontWeight = FontWeight.Normal,
-        fontSize = 12.sp
+        fontSize = 14.sp
+    ),
+
+    body2 = TextStyle(
+        fontWeight = FontWeight.Light,
+        fontSize = 12.sp,
+        letterSpacing = 1.15.sp
+    ),
+
+    button = TextStyle(
+        fontWeight = FontWeight.Bold,
+        fontSize = 14.sp,
+        letterSpacing = 1.15.sp
+    ),
+
+    caption = TextStyle(
+        fontWeight = FontWeight.Light,
+        fontSize = 11.sp,
+//        letterSpacing = 1.15.sp
     )
-    */
 )
